@@ -1,0 +1,268 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  max-width: 1200px;
+  padding: 50px 10px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* height: 100vh; */
+  margin: 0 auto;
+  color: #000000;
+}
+
+/* Header */
+
+.heading {
+  width: 50%;
+}
+
+.heading h1 {
+  font-family: Playfair Display;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4rem;
+  border-bottom: 0.75rem;
+}
+
+.heading .sub-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.sub-heading img {
+  margin-top: 0.5rem;
+  height: 0.75rem;
+}
+
+.sub-heading p {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+}
+
+.banner {
+  margin: 1.1rem 0 3rem;
+  padding-top: 1rem;
+}
+
+.banner img {
+  width: 100%;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 4rem;
+}
+
+.main__ingredients h1,
+.main__instructions h1 {
+  font-family: Playfair Display;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 1.5rem 0;
+}
+
+.main__ingredients h2 {
+  font-family: Playfair Display;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.main__ingredients input {
+  height: 1rem;
+  margin-right: 1rem;
+}
+
+.main__ingredients label {
+  font-family: Montserrat;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  width: 50%;
+}
+
+.main__instructions .step {
+  display: grid;
+  grid-template-columns: 1fr 15fr;
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+}
+
+.step .step__number {
+  font-family: Playfair Display;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #ffff;
+  border: 1px solid #f2994a;
+  border-radius: 6px;
+  background-color: #f2994a;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.step .step__text {
+  font-family: Montserrat;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.main__source p {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #bdbdbd;
+}
+
+.main__right {
+  margin-top: 1.5rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  height: 25%;
+  align-items: center;
+}
+
+.yields,
+.prep-time,
+.cook-time,
+.total-time {
+  display: flex;
+  gap: 10px;
+  margin: 0 auto 2.5rem;
+  padding: 0 0.8rem;
+}
+
+.main__right i {
+  font-size: 1.5rem;
+}
+
+.yields i {
+  color: #f2994a;
+}
+
+.main__right h3 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.main__right p {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: black;
+}
+
+.yields__text p {
+  color: #f2994a;
+}
+
+/* Footer */
+.footer__content {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17.07px;
+  text-align: center;
+  color: #bdbdbd;
+  margin-top: 3rem;
+}
+
+.footer__content span {
+  font-weight: 700;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 660px) {
+  #container {
+    padding: 32px 11px;
+  }
+
+  .heading {
+    width: 100%;
+  }
+
+  .heading h1 {
+    font-size: 24px;
+    line-height: 32px;
+    width: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-flow: column;
+    gap: 0;
+  }
+
+  .main__right {
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
+  }
+
+  .yields {
+    grid-column: 1 / 4;
+    width: 100%;
+  }
+
+  .prep-time,
+  .cook-time,
+  .total-time {
+    width: 100%;
+  }
+
+  .main__right h3 {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .main__right p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .main__right i {
+    font-size: 16px;
+  }
+
+  .main__right {
+    margin-top: 0;
+    box-shadow: none;
+    border-radius: none;
+    background: #ffffff;
+    padding: 0;
+  }
+
+  .yields,
+  .prep-time,
+  .cook-time,
+  .total-time {
+    margin-bottom: 12px;
+  }
+}
